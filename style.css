@@ -1,0 +1,152 @@
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  filter: grayscale(5%);
+}
+
+body {
+  background: #ffffff25 url(img/geometry2.png);
+  padding: 0px 10px;
+}
+
+h1 {
+  color: #1c0e96;
+  font-size: 45px;
+  text-align: center;
+  margin: 15px;
+}
+
+h1 span {
+  color: #e8f809;
+}
+
+.main-container {
+  background: #220ddae8;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  margin: 10px auto;
+  max-width: 980px;
+border:4px outset rgba(2, 1, 43, 0.753);
+border-radius: 13px;
+}
+
+main {
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+  padding: 20px;
+}
+
+.scoreboard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  font-size: 2rem;
+  background-color: #eafa06;
+  border:8px dotted rgb(8, 245, 8);
+  border-radius: 7px;
+  text-shadow: -1px -1px rgba(255, 166, 0, 0.938);
+
+}
+
+.restart {
+  cursor: pointer;
+  border:3px groove rgba(3, 61, 3, 0.705);
+  border-radius: 3px;
+  padding:2px;
+  margin:2px;
+  text-shadow: -1px -1px rgba(255, 166, 0, 0.938);
+
+}
+
+#score {
+  margin-left: 10px;
+
+}
+
+.restart {
+  margin-top: 30px;
+  font-size: 0.8rem;
+}
+
+.fa-redo {
+  margin-right: 10px;
+}
+
+#cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(100px, 150px));
+  grid-auto-rows: 1fr;
+  grid-gap: 5px 5px;
+}
+
+#match-it {
+  color: #ff2701;
+  border: 1px inset #ff9c19;
+  background: #ffffff;
+  font-size: 5rem;
+  text-shadow: -3px -3px rgba(255, 166, 0, 0.938);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15px;
+  width: 150px;
+  height: 150px;
+  margin: 15px auto;
+}
+
+.card {
+  color: #ff2701;
+  border: 3px inset #973f03;
+  background: #ffa807;
+  font-size: 5rem;
+  text-shadow: -3px -3px rgba(255, 166, 0, 0.938);  font-size: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.card.show {
+  background-color:#04f15f;
+  color: white;
+  text-shadow: -3px -3px rgba(1, 73, 25, 0.767);  
+}
+
+#cards .card i {
+  display: none;
+}
+
+#cards .card.show i, #cards .card.matched  i {
+  display: block;
+}
+
+#cards .matched {
+  color: #ff2701;
+  border: 1px inset #ff9c19;
+  background: #fff8fe;
+  text-shadow: -3px -3px rgba(255, 166, 0, 0.938);
+}
+
+#cards::before {
+  content: '';
+  width: 0;
+  padding-bottom: 100%;
+  grid-row: 1 / 1;
+  grid-column: 1 / 1;
+}
+
+#cards > *:first-child {
+  grid-row: 1 / 1;
+  grid-column: 1 / 1;
+}
+
+
